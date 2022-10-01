@@ -7,35 +7,35 @@ Test Setup               Start Test
 Test Teardown            Finish Test  
 
 *** Variables ***
-${email}                 papito@gmail.com
-${incorrect_email}       papito@gmai.co
+${email_correto}         papito@gmail.com
+${password_correta}      vaibrasil
+${email_incorreto}       papito@gmai.co
+${password_incorreta}    abc123
 ${email_vazio}
-${empty_password}                   
-${correct_password}      vaibrasil
-${incorrect_password}    abc123
+${password_vazia}
 
 *** Test Cases ***
 Deve logar com sucesso
     Do Login Successfully
 
 Deve validar credenciais inválidas - E-mail incorreto
-    Do Login         ${incorrect_email}    ${correct_password}                 
+    Do Login             ${email_incorreto}    ${password_correta}                 
     Toast Message Should Be        Credenciais inválidas, tente novamente!
 
 Deve validar credenciais inválidas - Senha incorreta
-    Do Login         ${email}              ${incorrect_password}                 
+    Do Login             ${email_correto}      ${password_incorreta}                 
     Toast Message Should Be        Credenciais inválidas, tente novamente!
 
 Deve validar credenciais inválidas - E-mail e senha em branco
-    Try Access Dashboard
+    Do Login             ${email_vazio}        ${password_vazia}
     Toast Message Should Be        Por favor, informe suas credenciais!
 
 Deve validar e-mail obrigatório
-    Do Login         ${email_vazio}        ${correct_password}
+    Do Login             ${email_vazio}        ${password_correta}
     Toast Message Should Be        Por favor, informe o seu email!
 
 Deve validar senha obrigatória
-    Do Login         ${email}              ${empty_password}
+    Do Login             ${email_correto}      ${password_vazia}
     Toast Message Should Be        Por favor, informe a sua senha secreta!
 
 
