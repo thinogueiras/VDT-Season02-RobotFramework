@@ -37,19 +37,23 @@
     cd VDT2/trade-sticker/
 
     Rodar a suíte de testes no Firefox:
+
         robot -d ./logs -v BROWSER:firefox tests/
 
     Rodar a suíte de testes no Chromium:
+    
         robot -d ./logs -v BROWSER:chromium tests/
+
+## Após a execução da suíte de testes terminar, será exibido em tela o caminho onde consta o log.html para consulta step by step de cada Caso de Teste e com screenshot anexado no relatório.
 
 ## Ponto de atenção ou um possível bug encontrado:
 
 ### Ao digitar Kylian Mbappé ou apenas Mbappé, o sistema não encontra a figurinha correspondente ao jogador e exibe um alerta em tela, mas é possível encontrá-la digitando apenas Kylian, porém, o craque francês é conhecido mundialmente como Mbappé, poucos o conhecem pelo seu primeiro nome.
 
 <h1 align="center">
-    <img src="images/Busca-por-Mbappé.png" width="350px">
+    <img src="images/Busca-por-Mbappé.png" width="550px">
 </h1>
 
 <h1 align="center">
-    <img src="images/Mbappé-não-encontrado.png" width="350px">
+    <img src="images/Mbappé-não-encontrado.png" width="550px">
 </h1>
