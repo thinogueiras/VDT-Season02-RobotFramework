@@ -1,10 +1,9 @@
 *** Settings ***
-Library   Browser
+Documentation          Login Page
 
-Documentation        Login Page
+Library                Browser
 
 *** Keywords ***
-
 Submit Credentials
     [Arguments]        ${email}        ${password}
     Fill Text          css=input[name="email"]        ${email}
@@ -12,8 +11,9 @@ Submit Credentials
     Click              css=button >> text=Entrar
 
 Toast Message Should Be
-    [Arguments]            ${expected_message}
+    [Arguments]        ${expected_message}
     ${locator}             
-    ...                    Set Variable
-    ...                    css=.Toastify__toast-body div >> text=${expected_message}    
-    Wait For Elements State        ${locator}    visible    5    
+    ...                Set Variable
+    ...                css=.Toastify__toast-body div >> text=${expected_message}    
+    Wait For Elements State            ${locator}
+    ...                visible         5    
