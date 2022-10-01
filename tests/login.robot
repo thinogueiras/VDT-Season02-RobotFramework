@@ -16,7 +16,7 @@ ${incorrect_password}    abc123
 
 *** Test Cases ***
 Deve logar com sucesso
-    Do Login Successfuly
+    Do Login Successfully
 
 Deve validar credenciais inválidas - E-mail incorreto
     Do Login         ${incorrect_email}    ${correct_password}                 
