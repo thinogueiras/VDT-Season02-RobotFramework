@@ -13,10 +13,6 @@ ${BROWSER}
 Go to Login Page        
     New Page                https://trade-sticker-dev.vercel.app
 
-Try Access Dashboard
-    Go to Login Page
-    Click                   css=button >> text=Entrar
-
 Do Login
     Go to Login Page
     [Arguments]             ${email}            ${password}
