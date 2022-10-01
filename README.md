@@ -1,6 +1,6 @@
-# Projeto de testes realizado na 2ª temporada do Viver de Teste - QACademy.
+# Projeto de testes realizado na 2ª temporada da série: Viver de Teste - QACademy.
 
-## Tecnologias utilizadas:
+## Ferramentas e tecnologias utilizadas:
 
     VSCode com o plugin Robot Code
 
@@ -36,10 +36,20 @@
 
     cd VDT2/trade-sticker/
 
-    robot -d ./logs tests/
+    Rodar a suíte de testes no Firefox:
+        robot -d ./logs -v BROWSER:firefox tests/
+
+    Rodar a suíte de testes no Chromium:
+        robot -d ./logs -v BROWSER:chromium tests/
 
 ## Ponto de atenção ou um possível bug encontrado:
 
-### Ao digitar Kylian Mbappé ou apenas Mbappé, o sistema não encontra a figurinha correspondente ao jogador e exibe um alerta em tela, mas é possível encontrá-la digitando apenas Kylian, porém, o craque francês é conhecido mundialmente como Mbappé, poucos conhecem seu primeiro nome.
+### Ao digitar Kylian Mbappé ou apenas Mbappé, o sistema não encontra a figurinha correspondente ao jogador e exibe um alerta em tela, mas é possível encontrá-la digitando apenas Kylian, porém, o craque francês é conhecido mundialmente como Mbappé, poucos o conhecem pelo seu primeiro nome.
 
-image.png
+<h1 align="center">
+    <img src="images/Busca-por-Mbappé.png" width="350px">
+</h1>
+
+<h1 align="center">
+    <img src="images/Mbappé-não-encontrado.png" width="350px">
+</h1>
