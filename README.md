@@ -13,6 +13,12 @@
 ## Pré-requisitos para a execução do projeto:
 
     Python: https://www.python.org/downloads/
+    
+    Observações importantes sobre a instalação do Python: 
+        Marcar a opção para adiconar o Python ao PATH do S.O.
+        Escolher a instalação customizada.
+        Selecionar para instalar para todos os usuários. 
+        Altere o caminho da instalação para C:\Python310
 
     Node.Js: https://nodejs.org/en/
 
