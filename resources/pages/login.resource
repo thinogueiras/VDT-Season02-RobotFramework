@@ -39,8 +39,7 @@ Submit With Remember
     ...                    css=input[name="remember"]
     Hover                  ${lembrar_dados}
     Sleep                  1           
-    Click                  ${lembrar_dados}
-    Highlight Elements     ${label_remember}   1   width=4px    style=solid    color=red
+    Click                  ${lembrar_dados}    
     Take Screenshot    
     Click                  ${btn_entrar}
 

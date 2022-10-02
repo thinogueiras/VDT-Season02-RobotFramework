@@ -22,7 +22,7 @@ Select Sticker
     Hover             ${locator}
     Sleep             2    
     Click             ${locator}
-    Sleep             2
+    Sleep             1
     Take Screenshot   
 
 Get In Touch
