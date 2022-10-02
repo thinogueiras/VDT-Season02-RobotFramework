@@ -19,23 +19,27 @@ Deve logar com sucesso
     Do Login Successfully
 
 Deve validar credenciais inválidas - E-mail incorreto
-    Do Login             ${email_incorreto}    ${password_correta}                 
+    Do Login                 ${email_incorreto}    ${password_correta}                 
     Toast Message Should Be        Credenciais inválidas, tente novamente!
 
 Deve validar credenciais inválidas - Senha incorreta
-    Do Login             ${email_correto}      ${password_incorreta}                 
+    Do Login                 ${email_correto}      ${password_incorreta}                 
     Toast Message Should Be        Credenciais inválidas, tente novamente!
 
 Deve validar credenciais inválidas - E-mail e senha em branco
-    Do Login             ${email_vazio}        ${password_vazia}
+    Do Login                 ${email_vazio}        ${password_vazia}
     Toast Message Should Be        Por favor, informe suas credenciais!
 
 Deve validar e-mail obrigatório
-    Do Login             ${email_vazio}        ${password_correta}
+    Do Login                 ${email_vazio}        ${password_correta}
     Toast Message Should Be        Por favor, informe o seu email!
 
 Deve validar senha obrigatória
-    Do Login             ${email_correto}      ${password_vazia}
+    Do Login                 ${email_correto}      ${password_vazia}
     Toast Message Should Be        Por favor, informe a sua senha secreta!
+
+Deve validar a opção Lembrar meus Dados    
+    Click the remember my data checkbox
+    Check Value Of Fields    ${email_correto}      ${password_correta}
 
 
