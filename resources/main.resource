@@ -8,13 +8,14 @@ Resource                    pages/dashboard.resource
 
 *** Variables ***
 ${BROWSER}
+${HEADLESS}
 
 *** Keywords ***
 Go to Login Page        
     New Page                https://trade-sticker-dev.vercel.app
 
 Start Test    
-    New Browser             headless=False      browser=${BROWSER}
+    New Browser             headless=${HEADLESS}      browser=${BROWSER}
 
 Finish Test
     Sleep                   1

@@ -46,11 +46,11 @@
     
     Rodar a suíte de testes no Firefox:
 
-        robot -d ./logs -v BROWSER:firefox tests/
+        robot -d ./logs -v BROWSER:firefox -v HEADLESS:False tests/
 
     Rodar a suíte de testes no Chromium:
     
-        robot -d ./logs -v BROWSER:chromium tests/
+        robot -d ./logs -v BROWSER:chromium -v HEADLESS:False tests/
 
 ## Após a execução da suíte de testes terminar, será exibido em tela o caminho onde consta o log.html para a consulta step by step de cada Caso de Teste e com screenshot anexado no relatório.
 
