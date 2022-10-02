@@ -13,16 +13,6 @@ ${BROWSER}
 Go to Login Page        
     New Page                https://trade-sticker-dev.vercel.app
 
-Do Login
-    Go to Login Page
-    [Arguments]             ${email}            ${password}
-    Submit Credentials      ${email}            ${password}
-
-Do Login Successfully
-    Go to Login Page
-    Submit Credentials      papito@gmail.com    vaibrasil
-    User Logged In
-
 Start Test    
     New Browser             headless=False      browser=${BROWSER}
 
