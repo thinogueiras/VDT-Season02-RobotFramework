@@ -40,8 +40,8 @@
 
     git clone https://github.com/thinogueiras/VDT-Season02-RobotFramework.git    
 
-    cd VDT2/trade-sticker/
-
+    cd VDT-Season02-RobotFramework
+    
     Rodar a suíte de testes no Firefox:
 
         robot -d ./logs -v BROWSER:firefox tests/
