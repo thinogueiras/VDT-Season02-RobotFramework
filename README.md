@@ -1,4 +1,4 @@
-# Projeto de testes realizado na 2ª temporada da série: Viver de Teste - QACademy.
+# Projeto de testes e2e realizado na 2ª temporada da série: Viver de Teste - 🚀 QACademy 🚀
 
 ## Ferramentas e tecnologias utilizadas:
 
@@ -15,22 +15,24 @@
     Python: https://www.python.org/downloads/
     
     Observações importantes sobre a instalação do Python: 
-        Marcar a opção para adiconar o Python ao PATH do S.O.
+        Selecionar a opção para adicionar o Python ao PATH do S.O.
         Escolher a instalação customizada.
         Selecionar para instalar para todos os usuários. 
         Altere o caminho da instalação para C:\Python310
 
-    Node.Js: https://nodejs.org/en/
+    Node.js 16: https://nodejs.org/en/
 
-    Git: https://git-scm.com/download/win
+    Git: https://git-scm.com/download/win (Necessário apenas se quiser realizar o clone do projeto)
+    
+    Comandos necessários:
 
-    pip install robotframework
+        pip install robotframework
 
-    pip install -U pip
+        pip install -U pip
 
-    pip install -U robotframework-browser
+        pip install -U robotframework-browser
 
-    rfbrowser init
+        rfbrowser init
 
 ## Executando o projeto:
 
@@ -50,9 +52,9 @@
     
         robot -d ./logs -v BROWSER:chromium tests/
 
-## Após a execução da suíte de testes terminar, será exibido em tela o caminho onde consta o log.html para consulta step by step de cada Caso de Teste e com screenshot anexado no relatório.
+## Após a execução da suíte de testes terminar, será exibido em tela o caminho onde consta o log.html para a consulta step by step de cada Caso de Teste e com screenshot anexado no relatório.
 
-## Ponto de atenção ou um possível bug encontrado:
+## Ponto de atenção ou um possível bug encontrado 🔎 🐞:
 
 ### Ao digitar Kylian Mbappé ou apenas Mbappé, o sistema não encontra a figurinha correspondente ao jogador e exibe um alerta em tela, mas é possível encontrá-la digitando apenas Kylian, porém, o craque francês é conhecido mundialmente como Mbappé, poucos o conhecem pelo seu primeiro nome.
 
@@ -63,3 +65,9 @@
 <h1 align="center">
     <img src="images/Mbappé-não-encontrado.png" width="550px">
 </h1>
+
+
+<strong>Thiago Nogueira dos Santos. <br/>
+Quality Assurance Analyst. </strong>
+
+**LinkedIn:** https://www.linkedin.com/in/thinogueiras/
