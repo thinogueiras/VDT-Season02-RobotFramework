@@ -20,7 +20,7 @@ Select Sticker
     ${locator}        Set Variable
     ...               xpath=//img[@alt="${name}"]/..
     Hover             ${locator}
-    Sleep             2    
+    Sleep             1    
     Click             ${locator}
     Sleep             1
     Take Screenshot   

@@ -8,14 +8,14 @@ Test Teardown       Finish Test
 
 *** Test Cases ***
 Deve negociar a figurinha Neymar Legend
-    Do Login Successfully                       
+    Do Login                      papito@gmail.com    vaibrasil                        
     Search User                   legend
     Select Sticker                Neymar Jr
     Get In Touch
     WhatsApp Sticker Message      Neymar Jr
 
 Deve negociar a figurinha Kylian Mbappé
-    Do Login Successfully                       
+    Do Login                      papito@gmail.com    vaibrasil  
     Search User                   Kylian
     Select Sticker                Kylian Mbappé
     Get In Touch
