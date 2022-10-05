@@ -1,5 +1,7 @@
 # Projeto de testes e2e realizado na 2ª temporada da série: Viver de Teste - 🚀 QACademy 🚀
 
+## <strong>Trade Sticker</strong> - WebApp Para troca de figurinhas da copa do mundo com outros colecionadores cadastrados na plataforma e possui integração com a API do WhatsApp.
+
 ## Ferramentas e tecnologias utilizadas:
 
     VSCode com o plugin Robot Code
