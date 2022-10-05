@@ -10,38 +10,32 @@ ${btn_entrar}=         css=button >> text=Entrar
 ${label_remember}=     css=.input-block label
 
 *** Keywords ***
-Do Login
-    Go to Login Page
-    [Arguments]                     ${email}            ${password}
-    Submit Credentials              ${email}            ${password}
+Go To Login Page        
+    New Page               https://trade-sticker-dev.vercel.app
 
-Do Login Successfully
-    Go to Login Page
-    Submit Credentials              papito@gmail.com    vaibrasil
-    User Logged In
-
-Click the remember my data checkbox
-    Go to Login Page
-    Submit With Remember   papito@gmail.com            vaibrasil
+Click Remember My Data Checkbox
+    Go To Login Page
+    Remember Submit Credentials    papito@gmail.com     vaibrasil
     Click on Logout
 
-Submit Credentials
-    [Arguments]            ${email}                    ${password}
-    Fill Text              ${email_field}              ${email}
-    Fill Text              ${password_field}           ${password}
+Fill Login Credentials
+    [Arguments]            ${email}                     ${password}
+    Fill Text              ${email_field}               ${email}
+    Fill Text              ${password_field}            ${password}
     Click                  ${btn_entrar}
 
-Submit With Remember
-    [Arguments]            ${email}                    ${password}
-    Fill Text              css=input[name="email"]     ${email}
-    Fill Text              css=input[name="password"]  ${password}
+Remember Submit Credentials
+    [Arguments]            ${email}                     ${password}
+    Fill Text              css=input[name="email"]      ${email}
+    Fill Text              css=input[name="password"]   ${password}
     ${lembrar_dados}       Set Variable
     ...                    css=input[name="remember"]
     Hover                  ${lembrar_dados}
     Sleep                  1           
     Click                  ${lembrar_dados}    
-    Take Screenshot    
-    Click                  ${btn_entrar}
+    Take Screenshot
+    Sleep                  1
+    Click                  ${btn_entrar}    
 
 Click on Logout
     ${logout}              Set Variable
@@ -61,5 +55,5 @@ Toast Message Should Be
 
 Check Value Of Fields
     [Arguments]        ${email}            ${password}
-    Get Text           ${email_field}      equal         ${email}
-    Get Text           ${password_field}   equal         ${password}
+    Get Text           ${email_field}      equal        ${email}
+    Get Text           ${password_field}   equal        ${password}
