@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation            Login tests
 
-Resource                 ../resources/main.resource
+Resource                 /opt/robotframework/resources/main.resource
 
 Test Setup               Start Test
 Test Teardown            Finish Test  
