@@ -11,7 +11,7 @@ ${label_remember}=     css=.input-block label
 
 *** Keywords ***
 Go To Login Page        
-    New Page               https://trade-sticker-dev.vercel.app
+    New Page                    https://trade-sticker-dev.vercel.app
 
 Click Remember My Data Checkbox
     Go To Login Page
@@ -19,41 +19,40 @@ Click Remember My Data Checkbox
     Click on Logout
 
 Fill Login Credentials
-    [Arguments]            ${email}                     ${password}
-    Fill Text              ${email_field}               ${email}
-    Fill Text              ${password_field}            ${password}
-    Click                  ${btn_entrar}
+    [Arguments]                 ${email}                     ${password}
+    
+    Fill Text                   ${email_field}               ${email}
+    Fill Text                   ${password_field}            ${password}
+    Click                       ${btn_entrar}
 
 Remember Submit Credentials
-    [Arguments]            ${email}                     ${password}
-    Fill Text              css=input[name="email"]      ${email}
-    Fill Text              css=input[name="password"]   ${password}
-    ${lembrar_dados}       Set Variable
-    ...                    css=input[name="remember"]
-    Hover                  ${lembrar_dados}
-    Sleep                  1           
-    Click                  ${lembrar_dados}    
+    [Arguments]                 ${email}                     ${password}
+    
+    Fill Text                   css=input[name="email"]      ${email}
+    Fill Text                   css=input[name="password"]   ${password}
+    ${lembrar_dados}            Set Variable                 css=input[name="remember"]
+    Hover                       ${lembrar_dados}
+    Wait For Elements State     ${lembrar_dados}        visible         5
+    Click                       ${lembrar_dados}    
     Take Screenshot
-    Sleep                  1
-    Click                  ${btn_entrar}    
+    Wait For Elements State     ${lembrar_dados}        visible         5
+    Click                       ${btn_entrar}    
 
 Click on Logout
-    ${logout}              Set Variable
-    ...                    css=img[alt="Voltar"]
-    Sleep                  1
-    Highlight Elements     ${logout}   1   width=4px    style=solid    color=red       
+    ${logout}                   Set Variable                 css=img[alt="Voltar"]
+    Wait For Elements State     ${lembrar_dados}        visible         5
+    Highlight Elements          ${logout}   1   width=4px    style=solid    color=red       
     Take Screenshot    
-    Click                  ${logout}
+    Click                       ${logout}
 
 Toast Message Should Be
-    [Arguments]            ${expected_message}
-    ${locator}             
-    ...                    Set Variable
-    ...                    css=.Toastify__toast-body div >> text=${expected_message}    
-    Wait For Elements State                ${locator}
-    ...                    visible         5 
+    [Arguments]                 ${expected_message}
+    
+    ${locator}                  Set Variable            css=.Toastify__toast-body div >> text=${expected_message}    
+    Wait For Elements State     ${locator}              visible         5 
 
 Check Value Of Fields
-    [Arguments]        ${email}            ${password}
-    Get Text           ${email_field}      equal        ${email}
-    Get Text           ${password_field}   equal        ${password}
+    [Arguments]                 ${email}                ${password}
+    
+    Get Text                    ${email_field}          equal           ${email}
+    Get Text                    ${password_field}       equal           ${password}
