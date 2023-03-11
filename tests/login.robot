@@ -1,10 +1,10 @@
 *** Settings ***
 Documentation            Login tests
 
-Resource                 /opt/robotframework/resources/main.resource
+Resource                 ../resources/main.resource
 
-Test Setup               Start Test
-Test Teardown            Finish Test  
+Test Setup               main.Start Test
+Test Teardown            main.Finish Test  
 
 *** Variables ***
 ${email_correto}         papito@gmail.com

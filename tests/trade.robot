@@ -1,10 +1,10 @@
 *** Settings ***
 Documentation       Teste de negociação de figurinhas da copa
 
-Resource            /opt/robotframework/resources/main.resource
+Resource            ../resources/main.resource
 
-Test Setup          Start Test
-Test Teardown       Finish Test
+Test Setup          main.Start Test
+Test Teardown       main.Finish Test
 
 *** Test Cases ***
 Deve negociar a figurinha Neymar Legend

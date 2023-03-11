@@ -17,3 +17,5 @@ jobs:
         uses: joonvena/robotframework-docker-action@v1.0
         with:    
           robot_threads: 4
+          robot_tests_dir: 'tests'
+          robot_reports_dir: 'reports'

@@ -40,8 +40,8 @@ Remember Submit Credentials
 
 Click on Logout
     ${logout}                   Set Variable                 css=img[alt="Voltar"]
-    Wait For Elements State     ${lembrar_dados}        visible         5
-    Highlight Elements          ${logout}   1   width=4px    style=solid    color=red       
+    Wait For Elements State     ${logout}               visible         5
+    Highlight Elements          ${logout}       2       width=4px       style=solid      color=red       
     Take Screenshot    
     Click                       ${logout}
 

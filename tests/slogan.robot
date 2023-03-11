@@ -3,10 +3,10 @@ Documentation         Slogan Test
 
 Library               Browser
 
-Resource              /opt/robotframework/resources/main.resource
+Resource              ../resources/main.resource
 
-Test Setup            Start Test
-Test Teardown         Finish Test
+Test Setup            main.Start Test
+Test Teardown         main.Finish Test
 
 *** Variables ***
 ${slogan}             Conectando colecionadores de figurinhas da copa.

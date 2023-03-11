@@ -12,11 +12,13 @@ User Logged In
     
 Search User
     [Arguments]       ${target}
+
     Fill Text         css=input[placeholder^="Busque"]    ${target}
     Click             css=button[type="submit"] >> text=Buscar    
 
 Select Sticker
     [Arguments]       ${name}
+
     ${locator}        Set Variable
     ...               xpath=//img[@alt="${name}"]/..
     Hover             ${locator}
