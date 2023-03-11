@@ -3,7 +3,7 @@ Documentation         Slogan Test
 
 Library               Browser
 
-Resource              ../resources/main.resource
+Resource              /opt/robotframework/resources/main.resource
 
 Test Setup            Start Test
 Test Teardown         Finish Test
