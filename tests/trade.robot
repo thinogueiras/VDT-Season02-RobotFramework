@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Teste de negociação de figurinhas da copa
 
-Resource            ../resources/main.resource
+Resource            /opt/robotframework/resources/main.resource
 
 Test Setup          Start Test
 Test Teardown       Finish Test
