@@ -15,3 +15,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Run Robot Framework Tests
         uses: GoleeTeam/robotframework-browser-action@v1.0
+        with:          
+          tests_dir: '/tests'
+          reports_dir: '/logs'
