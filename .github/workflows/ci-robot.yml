@@ -15,7 +15,3 @@ jobs:
         uses: actions/checkout@v2
       - name: Run Robot Framework Tests
         uses: joonvena/robotframework-docker-action@v0.1
-        with:    
-          robot_threads: 4
-          robot_tests_dir: 'tests'
-          robot_reports_dir: 'reports'
