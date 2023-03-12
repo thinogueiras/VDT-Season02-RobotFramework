@@ -14,4 +14,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run Robot Framework Tests
-        uses: joonvena/robotframework-docker-action@v0.1
+        uses: GoleeTeam/robotframework-browser-action@v1.0
