@@ -8,13 +8,13 @@ on:
       
 jobs:
   e2e-tests:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run Robot Framework Tests
-        uses: joonvena/robotframework-docker-action@v1.0
+        uses: joonvena/robotframework-docker-action@v1.1
         with:    
           robot_threads: 4
           robot_tests_dir: 'tests'
