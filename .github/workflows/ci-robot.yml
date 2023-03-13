@@ -17,3 +17,5 @@ jobs:
         uses: joonvena/robotframework-docker-action@v1.0
         with:    
           robot_threads: 2
+          robot_tests_dir: '/VDT-Season02-RobotFramework/tests'
+          robot_reports_dir: '/VDT-Season02-RobotFramework/logs'
