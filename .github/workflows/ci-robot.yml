@@ -7,14 +7,24 @@ on:
       branches: [ master, main, develop ]
       
 jobs:
-  robot_tests:
+  e2e-tests:
     runs-on: ubuntu-22.04
     
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Run Robot Framework Tests 
-        uses: joonvena/robotframework-docker-action@v1.0
-        with:    
-          robot_threads: 2
-          robot_tests_dir: 'tests'
+      - name: Install Robot Framework
+        run: |
+          pip install robotframework
+          robot --version
+      - name: Install Robot Framework - Browser
+        run: |
+          pip install -U pip
+          pip install robotframework-browser
+          pip install -U robotframework-browser
+          rfbrowser version
+      - name: Install Node Dependencies
+        run: |
+          rfbrowser init
+      - name: Run Robot Framework Tests
+        run: robot -d ./logs tests/         
