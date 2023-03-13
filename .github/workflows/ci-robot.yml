@@ -1,11 +1,8 @@
 name: Robot Framework - E2E Tests
 
-on:
-  push:
-    branches: [ develop ]
-  pull_request:
-      types: [opened, reopened, edited, closed]
-      branches: [ master ]
+on:  
+  pull_request:      
+      branches: [ master, develop ]
       
 jobs:
   e2e-tests:
