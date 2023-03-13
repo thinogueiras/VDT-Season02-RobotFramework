@@ -15,14 +15,12 @@ jobs:
         uses: actions/checkout@v3
       - name: Install Robot Framework
         run: |
-          pip install robotframework
-          robot --version
+          pip install robotframework          
       - name: Install Robot Framework - Browser
         run: |
           pip install -U pip
           pip install robotframework-browser
-          pip install -U robotframework-browser
-          rfbrowser version
+          pip install -U robotframework-browser          
       - name: Install Node Dependencies
         run: |
           rfbrowser init
