@@ -1,6 +1,6 @@
 name: Robot Framework - E2E Tests
 
-on:  
+on:
   pull_request:
       branches: [ master, develop ]
       
@@ -23,7 +23,7 @@ jobs:
         run: |
           rfbrowser init
 
-      - name: E2E Tests 🧪    
+      - name: E2E Tests ✅
         run: |
           robot -d ./logs -v BROWSER:chromium -v HEADLESS:true tests/ 
     
@@ -32,4 +32,3 @@ jobs:
         with:
           name: Test-Reports
           path: logs/
-  
