@@ -6,9 +6,9 @@
 
 ## Ferramentas e tecnologias utilizadas:
 
-    VSCode com o plugin Robot Code
+    VSCode com o plugin: Robot Framework Language Server
 
-    Robot Framework (Browser Library)
+    Robot Framework com a library Browser(Playwright)
 
     Python 3.10.7
 
@@ -24,9 +24,7 @@
         Selecionar para instalar para todos os usuários. 
         Altere o caminho da instalação para C:\Python310
 
-    Node.js 16: https://nodejs.org/en/
-
-    Git: https://git-scm.com/download/win (Necessário apenas se quiser realizar o clone do projeto)
+    Node.js 16: https://nodejs.org/en/    
     
     Comandos necessários:
 
@@ -34,7 +32,7 @@
 
         pip install -U pip
 
-        pip install -U robotframework-browser
+        pip install robotframework-browser
 
         rfbrowser init
 
@@ -56,22 +54,9 @@
     
         robot -d ./logs -v BROWSER:chromium -v HEADLESS:False tests/
 
-## Após a execução da suíte de testes terminar, será exibido em tela o caminho onde consta o log.html para a consulta step by step de cada Caso de Teste e com screenshot anexado no relatório.
+## Após a execução da suíte de testes, será exibido no terminal o caminho onde constam os arquivos log.html e report.html, contendo o status de todos os Cenário de Teste e com screenshot anexada.
 
-## Ponto de atenção ou um possível bug encontrado 🔎 🐞:
-
-### Ao digitar Kylian Mbappé ou apenas Mbappé, o sistema não encontra a figurinha correspondente ao jogador e exibe um alerta em tela, mas é possível encontrá-la digitando apenas Kylian, porém, o craque francês é conhecido mundialmente como Mbappé, poucos o conhecem pelo seu primeiro nome.
-
-<h1 align="center">
-    <img src="images/Busca-por-Mbappé.png" width="550px">
-</h1>
-
-<h1 align="center">
-    <img src="images/Mbappé-não-encontrado.png" width="550px">
-</h1>
-
-
-<strong>Thiago Nogueira dos Santos. <br/>
-Quality Assurance Analyst. </strong>
+<strong>Thiago Nogueira dos Santos <br/>
+QA Engineer </strong>
 
 **LinkedIn:** https://www.linkedin.com/in/thinogueiras/
