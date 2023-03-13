@@ -5,8 +5,8 @@ Library               Browser
 
 Resource              ../resources/main.resource
 
-Test Setup            main.Start Test
-Test Teardown         main.Finish Test
+Test Setup            Start Test
+Test Teardown         Finish Test
 
 *** Variables ***
 ${slogan}             Conectando colecionadores de figurinhas da copa.

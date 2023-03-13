@@ -24,6 +24,6 @@ jobs:
       - name: Install Node Dependencies
         run: |
           rfbrowser init
-      - name: Run Robot Framework Tests        
+      - name: E2E Tests        
         run: |
           robot -d ./logs -v BROWSER:chromium -v HEADLESS:true tests/

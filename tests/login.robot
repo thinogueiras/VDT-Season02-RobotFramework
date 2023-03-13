@@ -3,8 +3,8 @@ Documentation            Login tests
 
 Resource                 ../resources/main.resource
 
-Test Setup               main.Start Test
-Test Teardown            main.Finish Test  
+Test Setup               Start Test
+Test Teardown            Finish Test  
 
 *** Variables ***
 ${email_correto}         papito@gmail.com
