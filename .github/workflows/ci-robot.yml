@@ -16,7 +16,7 @@ jobs:
       - name: Install Robot Framework
         run: |
           pip install robotframework          
-      - name: Install Robot Framework - Browser
+      - name: Install library - Browser(Playwright)
         run: |
           pip install -U pip
           pip install robotframework-browser
@@ -24,6 +24,14 @@ jobs:
       - name: Install Node Dependencies
         run: |
           rfbrowser init
+
       - name: E2E Tests        
         run: |
-          robot -d ./logs -v BROWSER:chromium -v HEADLESS:true tests/
+          robot -d ./logs -v BROWSER:chromium -v HEADLESS:true tests/ 
+    
+      - name: Upload Reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: Test-Reports
+          path: /home/runner/work/VDT-Season02-RobotFramework/VDT-Season02-RobotFramework/logs/
+  
