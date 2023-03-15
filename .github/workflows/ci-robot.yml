@@ -44,8 +44,8 @@ jobs:
           SLACK_CHANNEL: pipeline-notifications
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://cdn-icons-png.flaticon.com/512/1642/1642322.png
+          SLACK_TITLE: 'Testes do PR executados com sucesso!'          
           SLACK_MESSAGE: 'Testes do PR executados com sucesso!  :robot:'
-          SLACK_TITLE: 'Testes do PR executados com sucesso!  :white_check_mark:'          
           SLACK_USERNAME: SUCCESS
       
       - name: Slack Notification - Failure
