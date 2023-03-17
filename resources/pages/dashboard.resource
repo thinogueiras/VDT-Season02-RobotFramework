@@ -33,11 +33,7 @@ Get In Touch
 WhatsApp Sticker Message
     [Arguments]       ${sticker_name}
 
-    ${expected_message}        Set Variable
-    ...    Oi, achei o seu contato no Trade Sticker. Estou interessado(a) na figurinha do ${sticker_name}, bora negociar?
+    ${expected_message}        Set Variable    Oi, achei o seu contato no Trade Sticker. Estou interessado(a) na figurinha do ${sticker_name}, bora negociar?
 
-    Switch Page       NEW
-    Wait For Elements State        
-    ...               css=p >> text=${expected_message}
-    ...               visible
-    ...               10000
+    Switch Page       NEW    
+    Wait For Condition         Text    css=p >> text=${expected_message}    equal    ${expected_message} 
