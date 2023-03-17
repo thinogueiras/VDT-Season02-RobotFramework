@@ -11,11 +11,11 @@ ${label_remember}=     css=.input-block label
 
 *** Keywords ***
 Go To Login Page        
-    New Page                    https://trade-sticker-dev.vercel.app
+    New Page           https://trade-sticker-dev.vercel.app
 
 Click Remember My Data Checkbox
     Go To Login Page
-    Remember Submit Credentials    papito@gmail.com     vaibrasil
+    Remember Submit Credentials        papito@gmail.com      vaibrasil
     Click on Logout
 
 Fill Login Credentials

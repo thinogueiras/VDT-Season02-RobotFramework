@@ -16,9 +16,11 @@ jobs:
         run: |
           pip install robotframework
         
-      - name: Install library - Browser(Playwright)        
+      - name: Install library Browser(Playwright)        
         run: |
-          pip install robotframework-browser  
+          pip install -U pip
+          pip install robotframework-browser
+          pip install -U robotframework-browser
 
       - name: Install Node Dependencies        
         run: |

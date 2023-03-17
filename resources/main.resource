@@ -21,8 +21,5 @@ Start Test
     New Browser                browser=${BROWSER}     headless=${HEADLESS}
 
 Finish Test
-    Print Screen
-
-Print Screen
     Sleep                      1
     Take Screenshot
