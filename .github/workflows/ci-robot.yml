@@ -2,7 +2,7 @@ name: Robot Framework - E2E Tests
 
 on:
   pull_request:
-      branches: [ master, develop ]
+      branches: [ develop ]
       
 jobs:
   e2e-tests:
@@ -16,11 +16,9 @@ jobs:
         run: |
           pip install robotframework
         
-      - name: Install library Browser(Playwright)        
-        run: |
-          pip install -U pip
+      - name: Install Playwright (Library Browser)
+        run: |          
           pip install robotframework-browser
-          pip install -U robotframework-browser
 
       - name: Install Node Dependencies        
         run: |
