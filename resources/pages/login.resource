@@ -4,10 +4,10 @@ Documentation          Login Page
 Library                Browser
 
 *** Variables ***
-${email_field}=        css=input[name="email"]
-${password_field}=     css=input[name="password"]
-${btn_entrar}=         css=button >> text=Entrar
-${label_remember}=     css=.input-block label
+${email_field}         css=input[name="email"]
+${password_field}      css=input[name="password"]
+${btn_entrar}          css=button >> text=Entrar
+${label_remember}      css=.input-block label
 
 *** Keywords ***
 Go To Login Page        
@@ -39,7 +39,7 @@ Remember Submit Credentials
     Click                       ${btn_entrar}    
 
 Click on Logout
-    ${logout}                   Set Variable                 css=img[alt="Voltar"]
+    ${logout}                   Set Variable            css=img[alt="Voltar"]
     Wait For Elements State     ${logout}               visible         5
     Highlight Elements          ${logout}       2       width=4px       style=solid      color=red       
     Take Screenshot    
