@@ -1,13 +1,23 @@
-.vscode
-logs
-log.html
-output.xml
-playwright-log.txt
-report.html
-interactive_console_output.xml
-results
+# Robot Framework
+resources/variables.resource
+
+# Pabot
 pabot_results
 .pabotsuitenames
-resources/variables.resource
+
+# Logs
+logs
+reports
+results
+log.html
+output.xml
+report.html
+playwright-log.txt
+
+# Runtime data
+interactive_console_output.xml
+
+# Others
+.vscode
 __pycache__
 .env

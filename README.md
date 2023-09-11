@@ -1,62 +1,58 @@
-# Projeto de testes e2e realizado na 2ª temporada da série: Viver de Teste - 🚀 QACademy 🚀
+# Projeto de testes e2e realizado na 2ª temporada da série: Viver de Teste.
 
 [![Robot Framework - E2E Tests](https://github.com/thinogueiras/VDT-Season02-RobotFramework/actions/workflows/ci-robot.yml/badge.svg)](https://github.com/thinogueiras/VDT-Season02-RobotFramework/actions/workflows/ci-robot.yml)
 
-## <strong>Trade Sticker</strong> - WebApp para troca de figurinhas da copa do mundo com outros colecionadores cadastrados na plataforma. Possui integração com a API do WhatsApp para iniciar a negociação das figurinhas.
 
-## Ferramentas e tecnologias utilizadas:
+## Premiação do desafio VDT 🏅 🏅
 
-    VSCode com o plugin: Robot Framework Language Server
+![Alt text](Images/winners.png)
 
-    Robot Framework com a library Browser(Playwright)
 
-    Python 3.10.7
+## Pré-requisitos mínimos de ambiente 📋 💻
 
-    Node.js 16.17.1 
+[Python](https://www.python.org/downloads/) 3.10.12.
 
-## Pré-requisitos para a execução do projeto:
+[Node.js](https://nodejs.org/en) 18.17.1.
 
-    Python: https://www.python.org/downloads/
-    
-    Observações importantes sobre a instalação do Python: 
-        Selecionar a opção para adicionar o Python ao PATH do S.O.
-        Escolher a instalação customizada.
-        Selecionar para instalar para todos os usuários. 
-        Altere o caminho da instalação para C:\Python310
 
-    Node.js 16: https://nodejs.org/en/    
-    
-    Comandos necessários:
+## Instalação do projeto 🚀 🚀
 
-        pip install robotframework
+```
+pip install -r requirements.txt
+```
 
-        pip install -U pip
+## Instruções 📢 ℹ️
 
-        pip install robotframework-browser
+Executar o comando abaixo no terminal:
 
-        rfbrowser init
+```
+rfbrowser init
+```
 
-## Executando o projeto:
+## Execução dos testes 🤖 🤖
 
-    Abrir o Git Bash ou qualquer outro terminal integrado ao Git.
+### Firefox:
 
-    Escolha uma pasta no seu S.O e entre nela para realizar o comando abaixo:
+```
+robot -d ./logs -v BROWSER:firefox -v HEADLESS:False tests/
+```
 
-    git clone https://github.com/thinogueiras/VDT-Season02-RobotFramework.git    
+### Chrome:
 
-    cd VDT-Season02-RobotFramework
-    
-    Rodar a suíte de testes no Firefox:
+```
+robot -d ./logs -v BROWSER:chromium -v HEADLESS:False tests/
+```
 
-        robot -d ./logs -v BROWSER:firefox -v HEADLESS:False tests/
+## Relatórios 📝 📄
 
-    Rodar a suíte de testes no Chromium:
-    
-        robot -d ./logs -v BROWSER:chromium -v HEADLESS:False tests/
+Verifique a pasta `logs` para visualizar os <b>relatórios</b> da execução.
 
-## Após a execução da suíte de testes, será exibido no terminal o caminho onde constam os arquivos log.html e report.html, contendo o status de todos os Cenário de Teste e com screenshot anexada.
+Abra o arquivo `report.html` ou `log.html` que é mais detalhado.
 
-<strong>Thiago Nogueira dos Santos <br/>
-QA Engineer </strong>
+---
 
-**LinkedIn:** https://www.linkedin.com/in/thinogueiras/
+<a href="https://www.linkedin.com/in/thinogueiras"><img alt="Linkedin" src="https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=Linkedin&logoColor=white"></a>
+
+<strong>Thiago Nogueira dos Santos</strong> 🤓 🫰🏽
+
+QA Automation Engineer 🔎 🐞

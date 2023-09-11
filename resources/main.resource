@@ -2,7 +2,6 @@
 Documentation                  Arquivo principal do projeto
 
 Library                        Browser
-# Library                        ../libraries/date.py
 
 Resource                       pages/login.resource
 Resource                       pages/dashboard.resource
@@ -29,13 +28,11 @@ Finish Test
     Take Screenshot
 
 # Setup Browserstack
-#     ${Datetime}                Get Current Datetime
-
 #     ${CAPS}                    Create Dictionary
 #     ...                        os=Windows
 #     ...                        os_version=11
 #     ...                        browser=chrome
-#     ...                        name=Test Execution: ${Datetime}
+#     ...                        name=Test Execution
 #     ...                        browserstack.username=${BROWSERSTACK_USERNAME}
 #     ...                        browserstack.accessKey=${BROWSERSTACK_ACCESSKEY}
 #     ...                        client.playwrightVersion=latest
