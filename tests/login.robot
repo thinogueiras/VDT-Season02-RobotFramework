@@ -1,20 +1,20 @@
 *** Settings ***
-Documentation            Login tests
+Documentation               Login tests
 
-Resource                 ../resources/main.resource
+Resource                    ../resources/base.resource
 
-Test Setup               Start Test
-Test Teardown            Finish Test  
+Test Setup                  Start Test
+Test Teardown               Finish Test  
 
 *** Variables ***
-${email_correto}         papito@gmail.com
-${password_correta}      vaibrasil
-${email_incorreto}       papito@gmai.co
-${password_incorreta}    abc123
+${email_correto}            papito@gmail.com
+${password_correta}         vaibrasil
+${email_incorreto}          papito@gmai.co
+${password_incorreta}       abc123
 
 *** Test Cases ***
 Deve logar com sucesso
-    Do Login                     ${email_correto}    ${password_correta}    
+    Do Login                ${email_correto}    ${password_correta}
     User Logged In
 
 Deve validar credenciais inválidas - E-mail incorreto
@@ -37,6 +37,9 @@ Deve validar senha obrigatória
     Do Login                     ${email_correto}      ${EMPTY}
     Toast Message Should Be      Por favor, informe a sua senha secreta!
 
-Deve validar a opção Lembrar meus Dados    
-    Click Remember My Data Checkbox
-    Check Value Of Fields        ${email_correto}      ${password_correta}
+Deve verificar se os dados foram lembrados
+    Do Login With Option To Remember Data        ${email_correto}    ${password_correta}
+    Click On Logout
+
+    Check Saved Credentials      ${email_correto}    ${password_correta}
+    Get Checkbox State           ${lembrar_dados}    ==    Checked

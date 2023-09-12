@@ -5,7 +5,7 @@
 
 ## Premiação do desafio VDT 🏅 🏅
 
-![Alt text](Images/winners.png)
+![Alt text](images/winners.jpeg)
 
 
 ## Pré-requisitos mínimos de ambiente 📋 💻
