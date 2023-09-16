@@ -4,13 +4,13 @@ on:
   push:
     branches: [ main ]
   pull_request:
-      branches: [ main, develop ]
+      branches: [ main ]
 
 jobs:
   e2e-tests:
     runs-on: ubuntu-22.04
-    name: Robot Framework - E2E Tests 🤖
-    
+    name: E2E Tests 🤖
+
     steps:
       - name: Checkout 🚀
         uses: actions/checkout@v3
@@ -20,7 +20,7 @@ jobs:
           pip install robotframework
           pip install robotframework-browser
 
-      - name: Initialize Browser Library
+      - name: Initialize Browser Library (Playwright)
         run: |
           rfbrowser init
 

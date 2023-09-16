@@ -1,6 +1,6 @@
 # Projeto de testes e2e realizado na 2ª temporada da série: Viver de Teste.
 
-[![Robot Framework - E2E Tests](https://github.com/thinogueiras/VDT-Season02-RobotFramework/actions/workflows/ci-robot.yml/badge.svg)](https://github.com/thinogueiras/VDT-Season02-RobotFramework/actions/workflows/ci-robot.yml)
+[![Robot Framework - E2E Tests](https://github.com/thinogueiras/VDT-Season02-RobotFramework/actions/workflows/continuous-testing.yml/badge.svg)](https://github.com/thinogueiras/VDT-Season02-RobotFramework/actions/workflows/continuous-testing.yml)
 
 
 ## Premiação do desafio VDT 🏅 🏅
