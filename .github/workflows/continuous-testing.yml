@@ -1,39 +1,40 @@
 name: Robot Framework - E2E Tests
 
 on:
+  push:
+    branches: [ main ]
   pull_request:
-      branches: [ develop ]
-      
+      branches: [ main, develop ]
+
 jobs:
   e2e-tests:
     runs-on: ubuntu-22.04
+    name: Robot Framework - E2E Tests 🤖
     
     steps:
-      - name: Checkout 🛎
+      - name: Checkout 🚀
         uses: actions/checkout@v3
 
-      - name: Install Robot Framework
+      - name: Install Robot Framework Dependencies
         run: |
           pip install robotframework
-        
-      - name: Install Playwright (Library Browser)
-        run: |          
           pip install robotframework-browser
 
-      - name: Install Node Dependencies        
+      - name: Initialize Browser Library
         run: |
-          rfbrowser init 
+          rfbrowser init
 
       - name: E2E Tests ✅        
         run: |
-          robot -d ./logs -v BROWSER:chromium -v HEADLESS:true tests/   
+          robot -d ./logs tests/   
     
-      - name: Upload Reports 🚀
-        if: always()
+      - name: Upload Reports 📖
         uses: actions/upload-artifact@v3
+        if: always()
         with:
-          name: Execution Test Reports
+          name: Robot-Reports
           path: logs/
+          retention-days: 30
           if-no-files-found: warn
         
       - name: Slack Notification - Success        
