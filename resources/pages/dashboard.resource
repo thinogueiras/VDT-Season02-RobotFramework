@@ -37,5 +37,6 @@ WhatsApp Sticker Message
 
     ${expected_message}     Set Variable    Oi, achei o seu contato no Trade Sticker. Estou interessado(a) na figurinha do ${sticker_name}, bora negociar?
 
-    Switch Page             NEW    
-    Wait For Condition      Text    css=p >> text=${expected_message}    equal    ${expected_message}
+    Switch Page             NEW
+
+    Wait For Condition      Text    xpath=//*[@id="main_block"]/p    equal    ${expected_message}

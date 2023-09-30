@@ -14,7 +14,7 @@ ${HEADLESS}                 True
 
 *** Keywords ***
 Start Test    
-    New Browser                   browser=${BROWSER}        headless=${HEADLESS}
+    New Browser             browser=${BROWSER}        headless=${HEADLESS}    
     Go To Page
     #Setup Browserstack
 
