@@ -6,17 +6,39 @@ Library                     Browser
 Resource                    pages/login.resource
 Resource                    pages/dashboard.resource
 
-# Resource                    variables.resource
-
 *** Variables ***
-${BROWSER}                  Chromium
-${HEADLESS}                 True
+${BS_USERNAME}              %{BROWSERSTACK_USERNAME}
+${BS_ACCESS_KEY}            %{BROWSERSTACK_ACCESS_KEY}
+${ENVIRONMENT}              local
+${BROWSER}                  chromium
+${HEADLESS}                 true
 
 *** Keywords ***
-Start Test    
+Start Test
+    IF  $ENVIRONMENT == 'remoto' or $ENVIRONMENT == 'browserstack'
+        Start Browserstack Tests
+    ELSE
+        Start Local Tests
+    END
+
+Start Local Tests
     New Browser             browser=${BROWSER}        headless=${HEADLESS}    
     Go To Page
-    #Setup Browserstack
+
+Start Browserstack Tests
+    ${CAPS}                 Create Dictionary
+    ...                     os=Windows
+    ...                     os_version=11
+    ...                     browser=chrome
+    ...                     browserstack.username=${BS_USERNAME}
+    ...                     browserstack.accessKey=${BS_ACCESS_KEY}
+    ...                     name=Trade Sticker Tests with Robot Framework & Playwright
+    ...                     build=tradesticker-e2e-tests
+    ...                     client.playwrightVersion=latest
+    ${BSENCODEDCAPS}        Evaluate    urllib.parse.quote( json.dumps(${CAPS}) )
+    Connect To Browser      wss://cdp.browserstack.com/playwright?caps=${BSENCODEDCAPS}
+
+    Go To Page
 
 Do Login
     [Arguments]                   ${email}        ${password}
@@ -34,14 +56,3 @@ Do Login With Option To Remember Data
 Finish Test
     Sleep                   1
     Take Screenshot
-
-# Setup Browserstack
-#     ${CAPS}                 Create Dictionary
-#     ...                     os=Windows
-#     ...                     os_version=11
-#     ...                     browser=chrome
-#     ...                     browserstack.username=${BROWSERSTACK_USERNAME}
-#     ...                     browserstack.accessKey=${BROWSERSTACK_ACCESSKEY}
-#     ...                     client.playwrightVersion=latest
-#     ${BSENCODEDCAPS}        Evaluate    urllib.parse.quote( json.dumps(${CAPS}) )
-#     Connect To Browser      wss://cdp.browserstack.com/playwright?caps=${BSENCODEDCAPS}
