@@ -2,6 +2,7 @@
 
 [![Robot Framework - E2E Tests](https://github.com/thinogueiras/VDT-Season02-RobotFramework/actions/workflows/continuous-testing.yml/badge.svg)](https://github.com/thinogueiras/VDT-Season02-RobotFramework/actions/workflows/continuous-testing.yml)
 
+## Confira no link a execução dos testes no [Browserstack.](https://automate.browserstack.com/dashboard/v2/public-build/MWhzbVhwd3hpL3RUaDFWZ2V0emY2UVlIeEoxMmFlQm5wTEFPMGh4SUhQTkhjZlVjMzVFUHJLd0RCUitNQzVkOGFRRmN2YndqcmdQU0VzK2g5OU1KcXc9PS0tS1ZUQ3REMHhEYXZuaWxLMGJuVWs1dz09--38294f350c780b5d75331538c524c76bf9f7bfa1)
 
 ## Premiação do desafio VDT 🏅 🏅
 
