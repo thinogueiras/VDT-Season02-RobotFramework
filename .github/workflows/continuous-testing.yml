@@ -6,6 +6,8 @@ on:
   pull_request:
       branches: [ main ]
 
+  workflow_dispatch:
+
 jobs:
   e2e-tests:
     runs-on: ubuntu-22.04
@@ -26,7 +28,7 @@ jobs:
 
       - name: E2E Tests ✅        
         run: |
-          robot -d ./logs tests/   
+          robot -d ./logs tests/trade.robot
     
       - name: Upload Reports 📖
         uses: actions/upload-artifact@v3
@@ -46,7 +48,7 @@ jobs:
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://cdn-icons-png.flaticon.com/512/1642/1642322.png
           SLACK_TITLE: 'All tests passed successfully'          
-          SLACK_MESSAGE: ':robot:  Tests after Pull Request passed  :robot:'
+          SLACK_MESSAGE: ':robot:  Tests passed  :robot:'
           SLACK_USERNAME: SUCCESS
       
       - name: Slack Notification - Failure
@@ -58,5 +60,5 @@ jobs:
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://www.novaconcursos.com.br/portal/wp-content/uploads/2013/12/erro-que-concurseiro-comente-300x3001.png          
           SLACK_TITLE: 'Some tests failed'
-          SLACK_MESSAGE: ':fire:  Tests after Pull Request failed  :fire:'
+          SLACK_MESSAGE: ':fire:  Tests failed  :fire:'
           SLACK_USERNAME: FAILURE

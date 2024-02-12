@@ -4,7 +4,7 @@ Documentation               Trade Tests
 Resource                    ../resources/base.resource
 
 Test Setup                  Start Test
-Test Teardown               Finish Test
+# Test Teardown               Finish Test
 
 *** Test Cases ***
 Deve negociar a figurinha Neymar Legend
