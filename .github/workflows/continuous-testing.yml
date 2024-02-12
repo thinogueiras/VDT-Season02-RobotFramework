@@ -28,7 +28,7 @@ jobs:
 
       - name: E2E Tests ✅        
         run: |
-          robot -d ./logs tests/trade.robot
+          robot -d ./logs tests/
     
       - name: Upload Reports 📖
         uses: actions/upload-artifact@v3
