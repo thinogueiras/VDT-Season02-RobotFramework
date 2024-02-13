@@ -17,16 +17,16 @@ Click On Logout
     Wait For Elements State       ${logout}               visible         5
     Click                         ${logout}
 
-Search User
+Search Sticker
     [Arguments]             ${target}
 
-    Fill Text               css=input[placeholder^="Busque"]    ${target}
+    Fill Text               css=input[placeholder^="Busque"]        ${target}
     Click                   css=button[type="submit"] >> text=Buscar    
 
 Select Sticker
     [Arguments]             ${name}
 
-    ${locator}              Set Variable        xpath=//img[@alt="${name}"]/..
+    ${locator}              Set Variable        xpath=//img[contains(@alt, "${name}")]/..
     Click                   ${locator}
 
 Get In Touch
@@ -39,4 +39,20 @@ WhatsApp Sticker Message
 
     Switch Page             NEW
 
-    Wait For Condition      Text    xpath=//*[@id="main_block"]/p    equal    ${expected_message}
+    Wait For Condition      Text    xpath=//*[@id="main_block"]/p        equal       ${expected_message}
+
+Validate Search Text Not Found
+    [Arguments]                   ${expected_text}
+
+    Get Text                      css=[class="error"]        equal        ${expected_text}
+
+Click On The Back Button
+    Click                         css=[type="button"] >> text=Voltar
+
+Wait Until The Search Bar Is Visible
+    Wait For Elements State       css=input[placeholder="Busque aqui..."]            visible
+
+Check Number Of Stickers
+    [Arguments]                   ${sticker_name}        ${count}
+
+    Get Element Count             xpath=//img[contains(@alt, "${sticker_name}")]     equal        ${count}

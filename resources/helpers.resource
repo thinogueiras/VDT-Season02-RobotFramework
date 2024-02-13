@@ -10,7 +10,7 @@ Do Login
     Fill Login Credentials        ${email}        ${password}
     Click On Enter Button
 
-Do Login With Option To Remember Data
+Do Login And Remember User Data
     [Arguments]                   ${email}        ${password}
 
     Fill Login Credentials        ${email}        ${password}

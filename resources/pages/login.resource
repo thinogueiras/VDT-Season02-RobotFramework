@@ -13,6 +13,19 @@ ${lembrar_dados}            css=input[name="remember"]
 Go To Page        
     New Page                https://trade-sticker-dev.vercel.app
 
+Validate Page Title
+    [Arguments]             ${expected_title}
+
+    Get Title               equal        ${expected_title}
+
+Validate Page Logo
+    Wait For Elements State        css=img[alt="Encontre um User"]        visible
+
+Validate Slogan Text
+    [Arguments]                   ${expected_text}
+
+    Get Text                      css=.logo-container h2        equal        ${expected_text}
+
 Fill Login Credentials
     [Arguments]             ${email}        ${password}
     
