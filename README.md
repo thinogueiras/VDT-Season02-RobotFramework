@@ -30,21 +30,21 @@ rfbrowser init
 
 ## Execução dos testes 🤖 🤖
 
-### Firefox:
+* ### Firefox:
 
-```
-robot -d ./logs -v BROWSER:firefox -v HEADLESS:False tests/
-```
+  ```
+  robot -d ./reports -v BROWSER:firefox -v HEADLESS:False tests/
+  ```
 
-### Chromium:
+* ### Chromium:
 
-```
-robot -d ./logs -v BROWSER:chromium -v HEADLESS:False tests/
-```
+  ```
+  robot -d ./reports -v BROWSER:chromium -v HEADLESS:False tests/
+  ```
 
 ## Relatórios 📝 📄
 
-Verifique a pasta `logs` para visualizar os <b>relatórios</b> da execução: `report.html` ou `log.html`.
+Verifique a pasta `reports` para visualizar os <b>relatórios</b> da execução: `report.html` ou `log.html`.
 
 ---
 
