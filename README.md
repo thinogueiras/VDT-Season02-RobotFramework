@@ -9,10 +9,22 @@
 
 ## Pré-requisitos mínimos de ambiente 📋 💻
 
-* [Python](https://www.python.org/downloads/) 3.10.12.
+* [Git](https://git-scm.com/).
 
-* [Node.js](https://nodejs.org/en) 18.17.1.
+* [Docker](https://www.docker.com/products/docker-desktop/) (Opcional).
 
+* [Python](https://www.python.org/downloads/) 3.11.x.
+
+* [Node.js](https://nodejs.org/en) 18.17.x.
+
+
+## Clone do Repositório 🔧 🔧
+
+```
+git clone https://github.com/thinogueiras/VDT-Season02-RobotFramework.git
+
+cd VDT-Season02-RobotFramework
+```
 
 ## Instalação do projeto 🚀 🚀
 
@@ -30,17 +42,35 @@ rfbrowser init
 
 ## Execução dos testes 🤖 🤖
 
-* ### Firefox:
+### Firefox:
 
-  ```
-  robot -d ./reports -v BROWSER:firefox -v HEADLESS:False tests/
-  ```
+```
+robot -d ./reports -v BROWSER:firefox -v HEADLESS:False tests/
+```
 
-* ### Chromium:
+### Chromium:
 
-  ```
-  robot -d ./reports -v BROWSER:chromium -v HEADLESS:False tests/
-  ```
+```
+robot -d ./reports -v BROWSER:chromium -v HEADLESS:False tests/
+```
+
+## Docker:
+
+```
+docker pull ppodgorsek/robot-framework:latest
+```
+
+#### Aplicando permissão de execução:
+```
+chmod +x run-docker-tests-single-thread.bat
+```
+
+#### Executando o arquivo:
+```
+./run-docker-tests-single-thread.bat
+```
+
+---
 
 ## Relatórios 📝 📄
 
